@@ -24,6 +24,14 @@ const base = {
                 presets: [['@babel/preset-env', {targets: {browsers: ['last 3 versions', 'Safari >= 8', 'iOS >= 8']}}]]
             }
         },
+            // htmlparser2 loader
+            {
+                test: /\/node_modules\/htmlparser2\/lib\/esm\/index\.js$/,
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            },
         {
             test: /\.mp3$/,
             loader: 'file-loader'

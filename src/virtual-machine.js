@@ -198,6 +198,7 @@ class VirtualMachine extends EventEmitter {
 
         // Load core extensions
         for (const id of CORE_EXTENSIONS) {
+            console.log(`vm : id ${id}`);
             this.extensionManager.loadExtensionIdSync(id);
         }
 

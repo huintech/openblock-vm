@@ -17,7 +17,9 @@ const PNPID_LIST = [
     'USB\\VID_2A03&PID_0043',
     'USB\\VID_2341&PID_0243',
     // For chinese clones that use CH340
-    'USB\\VID_1A86&PID_7523'
+    'USB\\VID_1A86&PID_7523',
+    // Silicon labs CP210x
+    'USB\\VID_10C4&PID_EA60'
 ];
 
 /**
@@ -25,7 +27,7 @@ const PNPID_LIST = [
  * @readonly
  */
 const SERIAL_CONFIG = {
-    baudRate: 57600,
+    baudRate: 115200,
     dataBits: 8,
     stopBits: 1
 };

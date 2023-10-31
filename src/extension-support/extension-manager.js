@@ -272,8 +272,10 @@ class ExtensionManager {
     /**
      * Get unbuild-in devices list from local server.
      * @returns {Promise} resolved devices list has been fetched or failure
+     * @todo cause error!! valid path
      */
     getDeviceList () {
+        console.log(`vm : url = ${localResourcesServerUrl}devices/cmtye/${formatMessage.setup().locale}.json`);
         return new Promise(resolve => {
             fetch(`${localResourcesServerUrl}devices/cmtye/${formatMessage.setup().locale}.json`)
                 .then(response => response.json())
